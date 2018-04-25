@@ -13,6 +13,7 @@ public class DATE{
     this.d = Integer.parseInt(args[0]);
     this.m = Integer.parseInt(args[1]);
     this.y = Integer.parseInt(args[2]);
+    if(this.y < 100)  this.y += 2000;   // default to the current millenium
   }
   public boolean leapCheck(){
     if(((this.y % 4 == 0) && (this.y % 100 != 0)) || (this.y % 400 == 0)){
@@ -38,13 +39,13 @@ public class DATE{
     }
   }
   public String toString(){
-    return new String(this.d + days() + " " + month() + " " + this.y);
+    return new String(String.format("%02d", this.d) + days() + " " + month() + " " + String.format("%04d", this.y));
   }
   public String iDate(){
-    return new String(this.m + "-" + this.d + "-" + this.y);
+    return new String(String.format("%02d", this.m) + "-" + String.format("%02d", this.d) + "-" + String.format("%04d", this.y));
   }
   public String lDate(){
-    return new String(this.d + "-" + this.m + "-" + this.y);
+    return new String(String.format("%02d", this.d) + "-" + String.format("%02d", this.m) + "-" + String.format("%04d", this.y));
   }
   public String days(){
     if(this.d / 10 != 1){
