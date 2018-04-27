@@ -5,7 +5,13 @@ public class DateTest{
     Scanner in = new Scanner(System.in);
     System.out.println("Enter DATE: ");
     DATE inputDate = new DATE(in.next());
-    if(inputDate.validate())System.out.println("DATE: " + inputDate);
-    System.out.println(inputDate.iDate());
+    if(inputDate.validate()){
+      System.out.println("DATE: " + inputDate);
+      System.out.println(inputDate.iDate());
+      System.out.println(inputDate.lDate());
+    }
+    else{
+      System.out.println("INVALID DATE !");
+    }
   }
 }

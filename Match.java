@@ -5,4 +5,5 @@ public class Match{
   int matchID;
   Sting venue;
   DATE matchDay;
+  TIME matchTime;
 }

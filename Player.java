@@ -7,4 +7,5 @@ class Player{
   String name;
   int jerseyNumber;
   Type role;
+  int capNumber;
 }
